@@ -1,4 +1,4 @@
-import ResultModel from "@/models/Result";
+import { ResultModel } from "@/models/Result";
 import Image from "next/image";
 
 export default function Result({
@@ -10,10 +10,13 @@ export default function Result({
 }) {
   return (
     <div className="space-y-4 text-center">
-      <h1 className="text-3xl font-bold">{finalResult.title}</h1>
+      <h1 className="text-3xl font-bold">Resultado:</h1>
+      <h2>
+        Você é <strong>{finalResult.title}</strong>!
+      </h2>
 
       {finalResult.imageUrl && (
-        <div className="relative w-full h-64">
+        <div className="relative w-full h-150">
           <Image
             src={finalResult.imageUrl}
             alt={finalResult.title}
@@ -29,7 +32,7 @@ export default function Result({
         onClick={onClick}
         className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
       >
-        Take Quiz Again
+        Refazer teste
       </button>
     </div>
   );

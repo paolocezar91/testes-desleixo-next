@@ -1,16 +1,20 @@
-import QuestionModel from "@/models/Question";
+import { QuestionModel } from "@/models/Question";
 import Image from "next/image";
 
 export default function CurrentQuestion({
+  index,
   currentQuestion,
   onClick,
 }: {
+  index: number;
   currentQuestion: QuestionModel;
   onClick: (id: string) => void;
 }) {
   return (
     <div className="space-y-4">
-      <h2 className="text-2xl font-bold">{currentQuestion.text}</h2>
+      <h2 className="text-2xl font-bold">
+        {index + 1}) {currentQuestion.text}
+      </h2>
       {currentQuestion.description && (
         <p className="text-gray-600">{currentQuestion.description}</p>
       )}
@@ -34,6 +38,9 @@ export default function CurrentQuestion({
             className="w-full p-4 text-left border rounded hover:bg-gray-50 hover:text-black"
           >
             {answer.text}
+            <small>
+              {answer.description ? ` - ${answer.description}` : ""}
+            </small>
           </button>
         ))}
       </div>

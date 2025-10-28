@@ -1,0 +1,118 @@
+{
+  "results": [
+    {
+      "id": "satyrzinho",
+      "title": "Satyrzinho Satan Boy",
+      "description": "Você é o verdadeiro Black Metal escandinavo de raiz. Seu chapéu de lata prova a morte de Cristo, enquanto você colhe belas flores junto de seu iaque na densa tundra",
+      "imageUrl": "/satyrzinho.png"
+    },
+    {
+      "id": "entrevistador",
+      "title": "Entrevistador",
+      "description": "Sua natureza inquisitiva faz você ver através das pegadinhas e das manotas. Sua falta de impressionabilidade consoante a relógios (supostamente) demoníacos te torna um excelente questionador",
+      "imageUrl": "/entrevistador.png"
+    },
+    {
+      "id": "tupa",
+      "title": "Tupã",
+      "description": "Você é um filho da puta, eu o destruí, eu o matei!",
+      "imageUrl": "/tupa.jpg"
+    },
+    {
+      "id": "odin",
+      "title": "Odin",
+      "description": "Você é o vencedor!",
+      "imageUrl": "/odin.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "text": "O verdadeiro black metal escandinavo de raiz...",
+      "answers": [
+        {
+          "text": "Não aceita os carecas!",
+          "value": "satyrzinho",
+          "description": "Aceita apenas o chapéu de metal"
+        },
+        {
+          "text": "Aceita todo mundo <3",
+          "value": "entrevistador",
+          "description": "Pra que fazer gatekeeping?"
+        },
+        {
+          "text": "Ouve Sepultura do Brasil",
+          "value": "tupa",
+          "description": "Sou brasileiro e não desisto nunca."
+        },
+        {
+          "text": "Sacrifica um olho por conhecimento",
+          "value": "odin",
+          "description": "e tem dois corvos"
+        }
+      ]
+    },
+    {
+      "text": "Pra que amigos você manda seu abraço?",
+      "answers": [
+        {
+          "text": "Não sou amigo de ninguém",
+          "value": "satyrzinho",
+          "description": ">:("
+        },
+        {
+          "text": "Aos guerreiros warriors",
+          "value": "entrevistador",
+          "description": "que galgaram a noite eterna por toda noite"
+        },
+        {
+          "text": "Para aquele filho da puta, eu o destruí, eu o matei!",
+          "value": "tupa",
+          "description": "olha que bela flor..."
+        },
+        {
+          "text": "Para o vencedor!",
+          "value": "odin",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "text": "Qual é o acessório mais crucial para provar que o Cristo está morto?",
+      "answers": [
+        {
+          "text": "Um chapéu de lata.",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Uma peruca de cabelo cumprido",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Um relógio comprado em uma feira em Contagem, do próprio Lúcifer.",
+          "value": "tupa"
+        },
+        {
+          "text": "Dois corvos que sussurram segredos cósmicos.",
+          "value": "odin"
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "id": "satyrzinho-quiz",
+    "title": "Por que me desafias, Babalon?",
+    "description": "Descubra quem você é no vídeo da entrevista de Satyrzinho Satan Boy!",
+    "coverVideo": "https://www.youtube.com/watch?v=AXS9-Rjsq_w",
+    "metadata": {
+      "author": "Paolo; Uri",
+      "category": "Memes, Verdadeiro Black Metal",
+      "tags": ["Memes", "Black Metal", "Chapéu de Lata"]
+    },
+    "config": {
+      "showProgress": true,
+      "allowPreviousQuestion": false,
+      "showPartialResults": false,
+      "randomizeQuestions": false
+    }
+  }
+}

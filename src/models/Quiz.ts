@@ -1,5 +1,5 @@
-import QuestionModel from "./Question";
-import ResultModel from "./Result";
+import { QuestionModel } from "./Question";
+import { ResultModel } from "./Result";
 
 export interface QuizMetadata {
   author?: string;
@@ -18,9 +18,10 @@ export interface QuizConfig {
   allowPreviousQuestion?: boolean;
   // Show partial results before finishing
   showPartialResults?: boolean;
+  randomizeQuestions?: boolean;
 }
 
-export default class QuizModel {
+export interface QuizModel {
   id: string;
   title: string;
   description: string;
@@ -33,26 +34,4 @@ export default class QuizModel {
   metadata?: QuizMetadata;
   // Optional configuration
   config?: QuizConfig;
-
-  constructor(attrs: {
-    id: string;
-    title: string;
-    description: string;
-    coverImage?: string;
-    coverVideo?: string;
-    questions: QuestionModel[];
-    results: ResultModel[];
-    metadata: QuizMetadata;
-    config: QuizConfig;
-  }) {
-    this.id = attrs.id;
-    this.title = attrs.title;
-    this.description = attrs.description;
-    this.coverImage = attrs.coverImage;
-    this.coverVideo = attrs.coverVideo;
-    this.questions = attrs.questions;
-    this.results = attrs.results;
-    this.metadata = attrs.metadata;
-    this.config = attrs.config;
-  }
 }

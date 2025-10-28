@@ -8,14 +8,14 @@ export default function RootLayout({
   children: React.ReactNode;
   title: string;
 }>) {
-  title = "Quiz Memes -- " + title;
+  title = "Testes do Desleixo -- " + title;
 
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <main className="min-h-screen p-8 max-w-2xl mx-auto">{children}</main>
+      <main className="min-h-screen p-8 w-180 mx-auto">{children}</main>
     </>
   );
 }

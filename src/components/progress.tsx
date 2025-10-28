@@ -1,5 +1,5 @@
-import QuizModel from "@/models/Quiz";
-import QuizProgressModel from "@/models/QuizProgress";
+import { QuizModel } from "@/models/Quiz";
+import { QuizProgressModel } from "@/models/QuizProgress";
 
 export default function ProgressBar({
   quiz,
