@@ -26,7 +26,9 @@ export default function Result({
         </div>
       )}
 
-      <p className="text-lg p-4 bg-black">{finalResult.description}</p>
+      <p className="text-lg p-4 bg-black rounded-md">
+        {finalResult.description}
+      </p>
 
       <button
         onClick={onClick}

@@ -14,7 +14,7 @@ export default function Header({
         <span>Testes do desleix</span>
         <span className="relative rotate-y-180">O</span>
       </h1>
-      <h2 className="text-3xl font-bold mb-4">{quiz.title}</h2>
+      <h2 className="text-2xl my-4 font-bold">{quiz.title}</h2>
       <p className="mb-4">
         <a href={quiz.coverVideo} target="_blank" className="underline">
           {quiz.description}
