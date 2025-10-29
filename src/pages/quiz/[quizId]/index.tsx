@@ -108,8 +108,8 @@ export function getStaticPaths() {
   };
 }
 
-export default function Home({ quizId }: { quizId: string }) {
-  const url = `api/quiz/${quizId}`;
+export default function Quiz({ quizId }: { quizId: string }) {
+  const url = `/api/quiz/${quizId}`;
   const [quiz, setQuiz] = useState<QuizModel | null>(null);
   const [progress, setProgress] = useState<QuizProgressModel | null>(null);
   const [finalResult, setFinalResult] = useState<ResultModel | null>(null);
@@ -178,6 +178,12 @@ export default function Home({ quizId }: { quizId: string }) {
   return (
     <RootLayout title={quiz.title}>
       <Header quiz={quiz}>
+        {quiz.config?.showProgress && progress.currentQuestionIndex > -1 && (
+          <ProgressBar
+            questionLength={quiz.questions.length}
+            currentQuestionIndex={progress.currentQuestionIndex}
+          />
+        )}
         {!currentQuestion && (
           <button
             onClick={start}
@@ -195,7 +201,6 @@ export default function Home({ quizId }: { quizId: string }) {
             currentQuestion={currentQuestion}
             onClick={handleAnswer}
           />
-          <ProgressBar quiz={quiz} progress={progress} />
         </div>
       )}
     </RootLayout>

@@ -1,0 +1,297 @@
+{
+  "quiz": {
+    "id": "satyrzinho-quiz",
+    "title": "Por que me desafias, Babalon?",
+    "description": "Descubra quem você é no vídeo da entrevista de Satyrzinho Satan Boy!",
+    "coverVideo": "https://www.youtube.com/watch?v=AXS9-Rjsq_w",
+    "metadata": {
+      "author": "Paolo; Uri",
+      "category": "Memes, Verdadeiro Black Metal",
+      "tags": ["Memes", "Black Metal", "Chapéu de Lata"]
+    },
+    "config": {
+      "showProgress": true,
+      "allowPreviousQuestion": false,
+      "showPartialResults": false
+    }
+  },
+  "results": [
+    {
+      "id": "satyrzinho",
+      "title": "Satyrzinho Satan Boy",
+      "description": "Você é o verdadeiro Black Metal escandinavo de raiz. Seu chapéu de lata prova a morte de Cristo, enquanto você colhe belas flores junto de seu iaque na densa tundra",
+      "imageUrl": "/satyrzinho.png"
+    },
+    {
+      "id": "entrevistador",
+      "title": "Entrevistador",
+      "description": "Sua natureza inquisitiva faz você ver através das pegadinhas e das manotas. Sua falta de impressionabilidade consoante a relógios (supostamente) demoníacos te torna um excelente questionador",
+      "imageUrl": "/entrevistador.png"
+    },
+    {
+      "id": "tupa",
+      "title": "Tupã",
+      "description": "Você é um filho da puta, eu o destruí, eu o matei!",
+      "imageUrl": "/tupa.jpg"
+    },
+    {
+      "id": "odin",
+      "title": "Odin",
+      "description": "Você é o vencedor!",
+      "imageUrl": "/odin.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "text": "Pra quais amigos você manda seu abraço?",
+      "answers": [
+        {
+          "text": "Não sou amigo de ninguém",
+          "description": ">:(",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Aos guerreiros warriors",
+          "description": "que galgaram a noite eterna por toda noite",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Para aquele filho da puta, eu o destruí!",
+          "description": "Eu o matei!",
+          "value": "tupa"
+        },
+        {
+          "text": "Para o vencendor",
+          "description": "O vencedor é Odin!",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "Qual é o acessório mais crucial para provar que o Cristo está morto?",
+      "answers": [
+        {
+          "text": "Um chapéu de lata.",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Um microfone muito grande",
+          "description": "Muito grande mesmo",
+          "value": "entrevistador"
+        },
+        {
+          "text": "O fim do colonialismo a nossa patria",
+          "value": "tupa"
+        },
+        {
+          "text": "Dois corvos que sussurram segredos cósmicos.",
+          "description": "Hunin e Mugin",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "O que você faz quando encontra uma flor bela na tundra?",
+      "answers": [
+        {
+          "text": "Encho meu coração de alegria.",
+          "description": "Que bela flor",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "O que diabos é uma Tundra?",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Dou um riso zombeteiro",
+          "description": "De onde vim há flores mais bonitas",
+          "value": "tupa"
+        },
+        {
+          "text": "Faço asfixia auto erótica até ficar mais inteligente",
+          "description": "¬¬",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "Qual destes NÃO é um amigo seu da família Khan?",
+      "answers": [
+        {
+          "text": "Gengis Khan.",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Kublai Khan",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Cacique Payakã",
+          "value": "tupa"
+        },
+        {
+          "text": "Tony Ramos (o ator).",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "Se você pudesse sentir apenas uma coisa para sempre, o que seria?",
+      "answers": [
+        {
+          "text": "Nada.",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Tesão",
+          "value": "entrevistador"
+        },
+        {
+          "text": "A fúria de destruir um filho da puta específico.",
+          "value": "tupa"
+        },
+        {
+          "text": "A sabedoria de saber que já sei tudo.",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "Qual é seu companheiro e para qual jornadas mística vocês irão?",
+      "answers": [
+        {
+          "text": "Um iaque para cavalgar",
+          "description": "pela densa tundra!",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Um suco de nectarina",
+          "description": "Num apartamento da MRV",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Uma jaguatirica",
+          "description": "e uma arara-azul",
+          "value": "tupa"
+        },
+        {
+          "text": "Dois lobos (Geri e Freki) e um cavalo de oito patas.",
+          "description": "até a árvore Yggdrasil",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "Qual a reação correta ao ser desafiado por um vendedor de feira?",
+      "answers": [
+        {
+          "text": "Comprar o relógio do diabo, mas antes dizer que não vai",
+          "description": "\"Você está me desafiando com suas pegadinhas, com suas manotas!\"",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Rapidamente se esquivar",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Destruir o vendedor e seu estoque de relógios.",
+          "value": "tupa"
+        },
+        {
+          "text": "Consultar os corvos para uma estratégia de negociação.",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "O verdadeiro black metal escandinavo de raiz...",
+      "answers": [
+        {
+          "text": "Não aceita os carecas!",
+          "description": "Aceita apenas o chapéu de metal",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Aceita todo mundo <3",
+          "description": "Pra que fazer gatekeeping?",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Toca Mystifier",
+          "value": "tupa"
+        },
+        {
+          "text": "Rema com a galera no Wacken Open Air",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "O que vem na sua mente quando ouve \"Trompá, trompá, trompá!\"?",
+      "answers": [
+        {
+          "text": "Vem a música!",
+          "description": "É nessa dimensão que se destrói o Cristo com sangue!",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Quem convidou esse doidinho mesmo?",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Os passos de Tupã chegando para a batalha.",
+          "value": "tupa"
+        },
+        {
+          "text": "Os cavalos de Valhalla marchando para o Ragnarok.",
+          "description": "Por Valhalla!",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "Qual é o lugar adequado para o \"putrefato nazareno\"?",
+      "answers": [
+        {
+          "text": "Em seu cadáver, putrefando e nazarentando",
+          "description": "e odiando black metal",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Na diabólica dialética",
+          "description": "a oblação nefanda ao Belzebu gargantuano...",
+          "value": "entrevistador"
+        },
+        {
+          "text": "No colo de quem perguntou.",
+          "value": "tupa"
+        },
+        {
+          "text": "Em Nifflheim",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "As artes do ritualismo obscuro transcendem todos os paradigmas de racionalidade para propor em contrapartida, o sacrifício ritual como morte obscurantista do comportamento funério. Como isso influencia os seus ritos?",
+      "answers": [
+        {
+          "text": "Eu não entendi porra nenhuma do que você disse",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "*Encara intensamente*",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Devoro meus inimigos como forma de humilhá-los",
+          "value": "tupa"
+        },
+        {
+          "text": "Sacrifica um olho por conhecimento",
+          "value": "odin"
+        }
+      ]
+    }
+  ]
+}

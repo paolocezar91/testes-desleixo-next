@@ -15,7 +15,11 @@ export default function Header({
 
   return (
     <div className="text-center">
-      <h1 className="text-3xl font-bold mb-4">{quiz.title}</h1>
+      <h1 className="magedon text-8xl flex justify-center">
+        <span>Testes do desleix</span>
+        <span className="relative rotate-y-180">O</span>
+      </h1>
+      <h2 className="text-3xl font-bold mb-4">{quiz.title}</h2>
       <p className="mb-4">{quiz.description}</p>
 
       {quiz.coverImage && (

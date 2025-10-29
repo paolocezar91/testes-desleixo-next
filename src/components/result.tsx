@@ -16,7 +16,7 @@ export default function Result({
       </h2>
 
       {finalResult.imageUrl && (
-        <div className="relative w-full h-150">
+        <div className="relative w-full h-125">
           <Image
             src={finalResult.imageUrl}
             alt={finalResult.title}
@@ -26,7 +26,7 @@ export default function Result({
         </div>
       )}
 
-      <p className="text-lg">{finalResult.description}</p>
+      <p className="text-lg p-4 bg-black">{finalResult.description}</p>
 
       <button
         onClick={onClick}

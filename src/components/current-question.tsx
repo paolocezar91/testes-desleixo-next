@@ -1,3 +1,4 @@
+import { shuffle } from "@/app/utils";
 import { QuestionModel } from "@/models/Question";
 import Image from "next/image";
 
@@ -10,6 +11,8 @@ export default function CurrentQuestion({
   currentQuestion: QuestionModel;
   onClick: (id: string) => void;
 }) {
+  const shuffledAnswers = shuffle(currentQuestion.answers);
+
   return (
     <div className="space-y-4">
       <h2 className="text-2xl font-bold">
@@ -31,11 +34,11 @@ export default function CurrentQuestion({
       )}
 
       <div className="space-y-3">
-        {currentQuestion.answers.map((answer) => (
+        {shuffledAnswers.map((answer) => (
           <button
             key={answer.id}
             onClick={() => onClick(answer.id)}
-            className="w-full p-4 text-left border rounded hover:bg-gray-50 hover:text-black"
+            className="w-full p-4 text-left border rounded bg-black hover:bg-gray-50 hover:text-black"
           >
             {answer.text}
             <small>

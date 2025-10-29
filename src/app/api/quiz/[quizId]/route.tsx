@@ -20,7 +20,13 @@ export async function GET(
 }
 
 async function getQuizById(quizId: string) {
-  const filePath = path.join(process.cwd(), "public", "quiz", `${quizId}.json`);
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "quiz",
+    quizId,
+    "quiz.json"
+  );
   const fileContent = await fs.readFile(filePath, "utf8");
   const { results, questions, quiz } = JSON.parse(fileContent) as {
     results: ResultModel[];

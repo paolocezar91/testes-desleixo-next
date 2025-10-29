@@ -7,18 +7,13 @@ export interface QuizMetadata {
   updatedAt: Date;
   category?: string;
   tags?: string[];
-  // Average time to complete in minutes
   estimatedTime?: number;
 }
 
 export interface QuizConfig {
-  // Show results progress while answering
   showProgress?: boolean;
-  // Allow going back to previous questions
   allowPreviousQuestion?: boolean;
-  // Show partial results before finishing
   showPartialResults?: boolean;
-  randomizeQuestions?: boolean;
 }
 
 export interface QuizModel {
@@ -27,6 +22,7 @@ export interface QuizModel {
   description: string;
   // Optional cover image for the quiz
   coverImage?: string;
+  // Optional cover video for the quiz
   coverVideo?: string;
   questions: QuestionModel[];
   results: ResultModel[];
