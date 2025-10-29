@@ -10,7 +10,7 @@ export default function RootLayout({
   subtitle?: string;
 }>) {
   let title = "Testes do Desleixo";
-  if (subtitle) title = " -- " + subtitle;
+  if (subtitle) title = title + " - " + subtitle;
 
   return (
     <>
