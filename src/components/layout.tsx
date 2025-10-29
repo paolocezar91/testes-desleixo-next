@@ -4,12 +4,13 @@ import Image from "next/image";
 
 export default function RootLayout({
   children,
-  title,
+  subtitle,
 }: Readonly<{
   children: React.ReactNode;
-  title: string;
+  subtitle?: string;
 }>) {
-  title = "Testes do Desleixo -- " + title;
+  let title = "Testes do Desleixo";
+  if (subtitle) title = " -- " + subtitle;
 
   return (
     <>

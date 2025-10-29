@@ -32,7 +32,7 @@ export default function About({ quizId }: { quizId: string }) {
   );
 
   return (
-    <RootLayout title="Sobre">
+    <RootLayout subtitle="Sobre">
       <div className="space-y-6">
         <h1 className="text-3xl font-bold mb-4">Testes do Desleixo - Sobre</h1>
         <p>

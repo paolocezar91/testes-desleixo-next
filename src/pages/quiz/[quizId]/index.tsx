@@ -132,7 +132,7 @@ export default function Quiz({ quizId }: { quizId: string }) {
 
   if (!quiz || !progress) {
     return (
-      <RootLayout title="Carregando...">
+      <RootLayout subtitle="Carregando...">
         <LoadingSpinner />
       </RootLayout>
     );
@@ -169,14 +169,14 @@ export default function Quiz({ quizId }: { quizId: string }) {
 
   if (finalResult) {
     return (
-      <RootLayout title={quiz.title}>
+      <RootLayout subtitle={quiz.title}>
         <Result finalResult={finalResult} onClick={restart} />
       </RootLayout>
     );
   }
 
   return (
-    <RootLayout title={quiz.title}>
+    <RootLayout subtitle={quiz.title}>
       <Header quiz={quiz}>
         {quiz.config?.showProgress && progress.currentQuestionIndex > -1 && (
           <ProgressBar
