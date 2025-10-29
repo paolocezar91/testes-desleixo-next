@@ -19,25 +19,25 @@
     {
       "id": "satyrzinho",
       "title": "Satyrzinho Satan Boy",
-      "description": "Você é o verdadeiro Black Metal escandinavo de raiz. Seu chapéu de lata prova a morte de Cristo, enquanto você colhe belas flores junto de seu iaque na densa tundra.",
+      "description": "Você é o verdadeiro Black Metal escandinavo de raiz. Seu chapéu de lata prova a morte de Cristo, enquanto você colhe belas flores junto de seu iaque na densa tundra. Porém sua intransigência diante a falta de folículos capilares alheios pode vir a causar problemas no futuro",
       "imageUrl": "/satyrzinho.png"
     },
     {
       "id": "entrevistador",
       "title": "Entrevistador",
-      "description": "Sua natureza inquisitiva faz você ver através das pegadinhas e das manotas. Sua falta de impressionabilidade consoante a relógios (supostamente) demoníacos te torna um excelente questionador.",
+      "description": "Sua natureza inquisitiva faz você ver através das pegadinhas e das manotas de supostos metaleiros tr00zera. Sua falta de impressionabilidade consoante a relógios (supostamente) demoníacos te torna um excelente questionador.",
       "imageUrl": "/entrevistador.png"
     },
     {
       "id": "tupa",
       "title": "Tupã",
-      "description": "Você é um filho da puta, eu o destruí, eu o matei!",
+      "description": "\"Você é um filho da puta, eu o destruí, eu o matei!\" - É o que diz o seu maior rival, mas como brasileiro, você não desiste nunca sempre ao lado da fauna e flora brasileira, curtindo o som de Mystifier.",
       "imageUrl": "/tupa.jpg"
     },
     {
       "id": "odin",
       "title": "Odin",
-      "description": "Você é o vencedor!",
+      "description": "\"Você é o vencedor!\" - Embora quem diga isso tem pouca credibilidade. Suas histórias irão inspirar o metal de raiz escandinavo por gerações, porém tome cuidado com contratos de arquitetura feitos com gigantes, teu filho pode virar uma égua e ficar gravido no processo.",
       "imageUrl": "/odin.jpg"
     }
   ],
@@ -221,7 +221,28 @@
           "value": "tupa"
         },
         {
-          "text": "Rema com a galera no Wacken Open Air",
+          "text": "Rema o dracar imaginário com a galera no Wacken Open Air",
+          "value": "odin"
+        }
+      ]
+    },
+    {
+      "text": "O que que... O que que... O que que... O que... Qual que é a sua?",
+      "answers": [
+        {
+          "text": "Eu uso um chapéu de lata para provar a todos que o Cristo está morto",
+          "value": "satyrzinho"
+        },
+        {
+          "text": "Apenas um trabalhador fazendo seu trabalho",
+          "value": "entrevistador"
+        },
+        {
+          "text": "Uma entidade protetora da mata, dos bichos e dos povos originários",
+          "value": "tupa"
+        },
+        {
+          "text": "Um velho que sabe das coisas",
           "value": "odin"
         }
       ]
@@ -263,7 +284,7 @@
           "value": "entrevistador"
         },
         {
-          "text": "No colo de quem perguntou.",
+          "text": "Junto com os malditos portugueses",
           "value": "tupa"
         },
         {
