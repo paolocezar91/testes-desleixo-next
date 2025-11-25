@@ -178,7 +178,9 @@ export default function Quiz({ quizId }: { quizId: string }) {
       <RootLayout subtitle={quiz.title}>
         <Header />
         <Result finalResult={finalResult}>
-          <Button onClick={restart}>Refazer teste</Button>
+          <Button className="w-fit" onClick={restart}>
+            Refazer teste
+          </Button>
         </Result>
       </RootLayout>
     );

@@ -1,10 +1,10 @@
 import RootLayout from "@/components/layout";
 import Link from "next/link";
 
-export default function About({ quizId }: { quizId: string }) {
+export default function About() {
   const jc = (
     <Link
-      className="underline hover:font-bold"
+      className="underline hover:text-red-600"
       href="https://www.youtube.com/@assimdisseojoao"
       target="_blank"
     >
@@ -14,7 +14,7 @@ export default function About({ quizId }: { quizId: string }) {
 
   const rm = (
     <Link
-      className="underline hover:font-bold"
+      className="underline hover:text-red-600"
       href="https://www.youtube.com/@rafaelmordente"
       target="_blank"
     >
@@ -24,7 +24,7 @@ export default function About({ quizId }: { quizId: string }) {
 
   const me = (
     <Link
-      className="underline hover:font-bold"
+      className="underline hover:text-red-600"
       href="https://www.youtube.com/@assimdisseojoao"
       target="_blank"
     >

@@ -1,4 +1,4 @@
-export default function Header({}: {}) {
+export default function Header() {
   return (
     <div className="text-center mb-4">
       <h1 className="magedon text-7xl md:text-8xl flex justify-center">

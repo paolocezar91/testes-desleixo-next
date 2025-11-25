@@ -26,10 +26,9 @@ export default function Result({
         </div>
       )}
 
-      <p className="text-lg p-4 bg-black rounded-md">
+      <div className="flex flex-col justify-center items-center text-lg p-4 bg-black/75 rounded-md">
         {finalResult.description}
-      </p>
-
+      </div>
       {children}
     </div>
   );

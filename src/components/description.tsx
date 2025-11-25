@@ -1,8 +1,7 @@
 import { QuizModel } from "@/models/Quiz";
 import Image from "next/image";
+import Link from "next/link";
 import YouTube from "react-youtube";
-import { SpinnerIcon } from "./spinner";
-import { useState } from "react";
 
 const mobileCheck = () => {
   let check = false;
@@ -45,13 +44,13 @@ export default function Description({ quiz }: { quiz: QuizModel }) {
       {!!quiz.coverVideo && !mobileCheck() ? (
         coverVideo
       ) : (
-        <a
+        <Link
           href={`https://www.youtube.com/watch?v=${quiz.coverVideo}`}
           target="_blank"
-          className="underline mb-4 block"
+          className="underline mb-4 block hover:text-red-600"
         >
           Ver vídeo
-        </a>
+        </Link>
       )}
     </div>
   );
