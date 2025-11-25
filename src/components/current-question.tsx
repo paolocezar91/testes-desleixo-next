@@ -1,14 +1,19 @@
 import { shuffle } from "@/app/utils";
 import { QuestionModel } from "@/models/Question";
 import Image from "next/image";
+import ProgressBar from "./progress";
 
 export default function CurrentQuestion({
-  index,
   currentQuestion,
+  index,
+  questionLength,
+  showProgress = true,
   onClick,
 }: {
-  index: number;
   currentQuestion: QuestionModel;
+  index: number;
+  questionLength: number;
+  showProgress?: boolean;
   onClick: (id: string) => void;
 }) {
   const shuffledAnswers = shuffle(currentQuestion.answers);
@@ -18,6 +23,12 @@ export default function CurrentQuestion({
       <h2 className="text-2xl font-bold">
         {index + 1}) {currentQuestion.text}
       </h2>
+      {showProgress && (
+        <ProgressBar
+          questionLength={questionLength}
+          currentQuestionIndex={index}
+        />
+      )}
       {currentQuestion.description && (
         <p className="text-gray-600">{currentQuestion.description}</p>
       )}

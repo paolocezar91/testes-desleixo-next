@@ -1,37 +1,13 @@
-import { QuizModel } from "@/models/Quiz";
-import Image from "next/image";
-
-export default function Header({
-  children,
-  quiz,
-}: {
-  children: React.ReactNode;
-  quiz: QuizModel;
-}) {
+export default function Header({}: {}) {
   return (
-    <div className="text-center">
+    <div className="text-center mb-4">
       <h1 className="magedon text-7xl md:text-8xl flex justify-center">
-        <span>Testes do desleix</span>
-        <span className="relative rotate-y-180">O</span>
+        <span>Testes&nbsp;</span>
+        <span>d</span>
+        <span className="relative rotate-y-180">o</span>&nbsp;
+        <span>desle</span>
+        <span className="relative rotate-y-180">Oxi</span>
       </h1>
-      <h2 className="text-2xl my-4 font-bold">{quiz.title}</h2>
-      <p className="mb-4">
-        <a href={quiz.coverVideo} target="_blank" className="underline">
-          {quiz.description}
-        </a>
-      </p>
-
-      {quiz.coverImage && (
-        <div className="relative w-full h-64 mb-4">
-          <Image
-            src={quiz.coverImage}
-            alt={quiz.title}
-            fill
-            className="object-cover rounded-lg"
-          />
-        </div>
-      )}
-      {children}
     </div>
   );
 }

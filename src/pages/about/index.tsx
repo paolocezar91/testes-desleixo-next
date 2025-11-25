@@ -1,34 +1,35 @@
 import RootLayout from "@/components/layout";
+import Link from "next/link";
 
 export default function About({ quizId }: { quizId: string }) {
   const jc = (
-    <a
+    <Link
       className="underline hover:font-bold"
       href="https://www.youtube.com/@assimdisseojoao"
       target="_blank"
     >
       Tio João Carvalho
-    </a>
+    </Link>
   );
 
   const rm = (
-    <a
+    <Link
       className="underline hover:font-bold"
       href="https://www.youtube.com/@rafaelmordente"
       target="_blank"
     >
       The Brazilian Rafael Mordente
-    </a>
+    </Link>
   );
 
   const me = (
-    <a
+    <Link
       className="underline hover:font-bold"
       href="https://www.youtube.com/@assimdisseojoao"
       target="_blank"
     >
       Paolo Pestalozzi
-    </a>
+    </Link>
   );
 
   return (
@@ -45,9 +46,6 @@ export default function About({ quizId }: { quizId: string }) {
         <ul className="list-disc">
           <li className="ml-4">
             Ao {jc} e {rm} por imortalizarem Satyrzinho e o Entrevistador
-          </li>
-          <li className="ml-4">
-            Uri, que sempre embarca nessas maluquices comigo
           </li>
           <li className="ml-4">Odin, o vencedor</li>
           <li className="ml-4">Tupã, o filho da puta</li>

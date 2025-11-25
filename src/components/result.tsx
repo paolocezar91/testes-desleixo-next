@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Result({
   finalResult,
-  onClick,
+  children,
 }: {
   finalResult: ResultModel;
-  onClick: () => void;
+  children: React.ReactNode;
 }) {
   return (
     <div className="space-y-4 text-center">
@@ -16,12 +16,12 @@ export default function Result({
       </h2>
 
       {finalResult.imageUrl && (
-        <div className="relative w-full h-125">
+        <div className="relative w-full h-100">
           <Image
             src={finalResult.imageUrl}
             alt={finalResult.title}
             fill
-            className="object-cover rounded-lg"
+            className="object-cover rounded-lg max-h-300"
           />
         </div>
       )}
@@ -30,12 +30,7 @@ export default function Result({
         {finalResult.description}
       </p>
 
-      <button
-        onClick={onClick}
-        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-      >
-        Refazer teste
-      </button>
+      {children}
     </div>
   );
 }

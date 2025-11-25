@@ -1,15 +1,17 @@
+import { Button } from "@/components/button";
 import CurrentQuestion from "@/components/current-question";
+import Description from "@/components/description";
 import Header from "@/components/header";
-import ProgressBar from "@/components/progress";
+import RootLayout from "@/components/layout";
 import Result from "@/components/result";
+import LoadingSpinner from "@/components/spinner";
+import Title from "@/components/title";
+import { QuestionModel } from "@/models/Question";
+import { QuizModel } from "@/models/Quiz";
 import { QuizProgressModel } from "@/models/QuizProgress";
 import { ResultModel } from "@/models/Result";
-import { useEffect, useState } from "react";
-import RootLayout from "@/components/layout";
-import { QuizModel } from "@/models/Quiz";
 import { GetStaticPropsContext } from "next";
-import LoadingSpinner from "@/components/spinner";
-import { QuestionModel } from "@/models/Question";
+import { useCallback, useEffect, useState } from "react";
 
 /**
  * Record an answer into the provided QuizProgress instance.
@@ -117,14 +119,47 @@ export default function Quiz({ quizId }: { quizId: string }) {
     null
   );
 
+  const start = useCallback(() => {
+    const currentQuestionIndex = 0;
+    setProgress({ ...progress!, currentQuestionIndex });
+    setCurrentQuestion(quiz!.questions[currentQuestionIndex]);
+  }, [progress, quiz]);
+
+  const restart = useCallback(() => {
+    setProgress(getEmptyProgressModel(quiz!.id));
+    setFinalResult(null);
+  }, [quiz]);
+
+  const handleAnswer = useCallback(
+    (answerId: string) => {
+      if (!currentQuestion) return;
+
+      const currentProgress = recordAnswer(
+        progress!,
+        quiz!.questions,
+        currentQuestion.id,
+        answerId
+      );
+
+      if (currentProgress) {
+        setFinalResult(getFinalResult(quiz!, currentProgress));
+        setProgress({ ...currentProgress });
+        const currentQuestion_ =
+          quiz!.questions[currentProgress.currentQuestionIndex];
+        setCurrentQuestion(currentQuestion_);
+      }
+    },
+    [currentQuestion, progress, quiz]
+  );
+
   useEffect(() => {
     fetchAndJson(url).then((quiz_: QuizModel) => {
       setQuiz(quiz_);
-      const progress_ = getEmptyProgressModel(quiz_.id);
-      setProgress(progress_);
+      const emptyProgress = getEmptyProgressModel(quiz_.id);
+      setProgress(emptyProgress);
       setCurrentQuestion(
-        progress_.currentQuestionIndex >= 0
-          ? quiz_.questions[progress_.currentQuestionIndex]
+        emptyProgress.currentQuestionIndex >= 0
+          ? quiz_.questions[emptyProgress.currentQuestionIndex]
           : null
       );
     });
@@ -132,71 +167,40 @@ export default function Quiz({ quizId }: { quizId: string }) {
 
   if (!quiz || !progress) {
     return (
-      <RootLayout subtitle="Carregando...">
+      <RootLayout>
         <LoadingSpinner />
       </RootLayout>
     );
   }
 
-  const start = () => {
-    const currentQuestionIndex = 0;
-    setProgress({ ...progress, currentQuestionIndex });
-    setCurrentQuestion(quiz.questions[currentQuestionIndex]);
-  };
-
-  const restart = () => {
-    setProgress(getEmptyProgressModel(quiz.id));
-    setFinalResult(null);
-  };
-
-  const handleAnswer = (answerId: string) => {
-    if (!currentQuestion) return;
-
-    const progress_ = recordAnswer(
-      progress,
-      quiz.questions,
-      currentQuestion.id,
-      answerId
-    );
-
-    if (progress_) {
-      setFinalResult(getFinalResult(quiz, progress_));
-      setProgress({ ...progress_ });
-      const currentQuestion_ = quiz.questions[progress_.currentQuestionIndex];
-      setCurrentQuestion(currentQuestion_);
-    }
-  };
-
   if (finalResult) {
     return (
       <RootLayout subtitle={quiz.title}>
-        <Result finalResult={finalResult} onClick={restart} />
+        <Header />
+        <Result finalResult={finalResult}>
+          <Button onClick={restart}>Refazer teste</Button>
+        </Result>
       </RootLayout>
     );
   }
 
   return (
     <RootLayout subtitle={quiz.title}>
-      <Header quiz={quiz}>
-        {quiz.config?.showProgress && progress.currentQuestionIndex > -1 && (
-          <ProgressBar
-            questionLength={quiz.questions.length}
-            currentQuestionIndex={progress.currentQuestionIndex}
-          />
-        )}
-        {!currentQuestion && (
-          <button
-            onClick={start}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          >
-            Iniciar teste
-          </button>
-        )}
-      </Header>
+      <Header />
+      <Title text={quiz.title} />
+
+      {!currentQuestion && (
+        <div className="flex flex-col items-center">
+          <Description quiz={quiz} />
+          <Button onClick={start}>Iniciar teste</Button>
+        </div>
+      )}
 
       {currentQuestion && (
-        <div className="space-y-6">
+        <div className="pt-4">
           <CurrentQuestion
+            showProgress={quiz.config?.showProgress}
+            questionLength={quiz.questions.length}
             index={progress.currentQuestionIndex}
             currentQuestion={currentQuestion}
             onClick={handleAnswer}
