@@ -1,17 +1,18 @@
-import { Button } from "@/components/button";
-import CurrentQuestion from "@/components/current-question";
-import Description from "@/components/description";
-import Header from "@/components/header";
-import RootLayout from "@/components/layout";
-import Result from "@/components/result";
-import LoadingSpinner from "@/components/spinner";
-import Title from "@/components/title";
+import { Button } from "@/components/shared/button";
+import QuizCurrentQuestion from "@/components/quiz/quiz-current-question";
+import QuizDescription from "@/components/quiz/quiz-description";
+import Header from "@/components/layout/header";
+import RootLayout from "@/components/layout/layout";
+import QuizResult from "@/components/quiz/quiz-result";
+import LoadingSpinner from "@/components/shared/spinner";
+import Title from "@/components/shared/title";
 import { QuestionModel } from "@/models/Question";
 import { QuizModel } from "@/models/Quiz";
 import { QuizProgressModel } from "@/models/QuizProgress";
 import { ResultModel } from "@/models/Result";
 import { GetStaticPropsContext } from "next";
 import { useCallback, useEffect, useState } from "react";
+import { fetchAndJson } from "@/app/api";
 
 /**
  * Record an answer into the provided QuizProgress instance.
@@ -81,10 +82,6 @@ function getEmptyProgressModel(quizId: string): QuizProgressModel {
     scores: {},
     startedAt: new Date(),
   };
-}
-
-async function fetchAndJson(url: string) {
-  return (await fetch(url)).json();
 }
 
 export function getStaticProps(context: GetStaticPropsContext) {
@@ -177,11 +174,11 @@ export default function Quiz({ quizId }: { quizId: string }) {
     return (
       <RootLayout subtitle={quiz.title}>
         <Header />
-        <Result finalResult={finalResult}>
+        <QuizResult finalResult={finalResult}>
           <Button className="w-fit" onClick={restart}>
             Refazer teste
           </Button>
-        </Result>
+        </QuizResult>
       </RootLayout>
     );
   }
@@ -193,14 +190,14 @@ export default function Quiz({ quizId }: { quizId: string }) {
 
       {!currentQuestion && (
         <div className="flex flex-col items-center">
-          <Description quiz={quiz} />
+          <QuizDescription quiz={quiz} />
           <Button onClick={start}>Iniciar teste</Button>
         </div>
       )}
 
       {currentQuestion && (
         <div className="pt-4">
-          <CurrentQuestion
+          <QuizCurrentQuestion
             showProgress={quiz.config?.showProgress}
             questionLength={quiz.questions.length}
             index={progress.currentQuestionIndex}

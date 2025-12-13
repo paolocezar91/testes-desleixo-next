@@ -19,7 +19,7 @@ const mobileCheck = () => {
   return check;
 };
 
-export default function Description({ quiz }: { quiz: QuizModel }) {
+export default function QuizDescription({ quiz }: { quiz: QuizModel }) {
   const coverImage = (
     <div className="relative w-full h-64 mb-4">
       <Image

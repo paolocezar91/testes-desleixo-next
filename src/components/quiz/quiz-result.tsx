@@ -1,7 +1,7 @@
 import { ResultModel } from "@/models/Result";
 import Image from "next/image";
 
-export default function Result({
+export default function QuizResult({
   finalResult,
   children,
 }: {

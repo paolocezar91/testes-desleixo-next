@@ -1,9 +1,9 @@
 import { shuffle } from "@/app/utils";
 import { QuestionModel } from "@/models/Question";
 import Image from "next/image";
-import ProgressBar from "./progress";
+import QuizProgressBar from "./quiz-progress-bar";
 
-export default function CurrentQuestion({
+export default function QuizCurrentQuestion({
   currentQuestion,
   index,
   questionLength,
@@ -24,7 +24,7 @@ export default function CurrentQuestion({
         {index + 1}) {currentQuestion.text}
       </h2>
       {showProgress && (
-        <ProgressBar
+        <QuizProgressBar
           questionLength={questionLength}
           currentQuestionIndex={index}
         />

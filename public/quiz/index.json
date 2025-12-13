@@ -1,0 +1,18 @@
+[
+  {
+    "id": "satyrzinho-quiz",
+    "title": "Por que me desafias, Babalon?",
+    "description": "Bom dia, guerreiros warriors, vocês que galgaram a noite eterna durante toda a noite. É, nós estamos com mais um quiz aqui. Descubra quem você é no vídeo da entrevista de Satyrzinho Satan Boy!",
+    "coverVideo": "AXS9-Rjsq_w",
+    "metadata": {
+      "author": "Paolo",
+      "category": "Memes, Verdadeiro Black Metal",
+      "tags": ["Memes", "Black Metal", "Chapéu de Lata"]
+    },
+    "config": {
+      "showProgress": true,
+      "allowPreviousQuestion": false,
+      "showPartialResults": false
+    }
+  }
+]

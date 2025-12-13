@@ -1,4 +1,4 @@
-import RootLayout from "@/components/layout";
+import RootLayout from "@/components/layout/layout";
 import Link from "next/link";
 
 export default function About() {
