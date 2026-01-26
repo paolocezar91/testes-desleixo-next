@@ -25,7 +25,7 @@ export default function About() {
   const me = (
     <Link
       className="underline hover:text-red-600"
-      href="https://www.youtube.com/@assimdisseojoao"
+      href="https://github.com/paolocezar91"
       target="_blank"
     >
       Paolo Pestalozzi
@@ -43,13 +43,9 @@ export default function About() {
           Brasil.
         </p>
         <h2 className="text-2xl font-bold mb-4">Agradecimento especial</h2>
-        <ul className="list-disc">
-          <li className="ml-4">
-            Ao {jc} e {rm} por imortalizarem Satyrzinho e o Entrevistador
-          </li>
-          <li className="ml-4">Odin, o vencedor</li>
-          <li className="ml-4">Tupã, o filho da puta</li>
-        </ul>
+        <p>
+          Ao {jc} e {rm} por imortalizarem Satyrzinho e o Entrevistador
+        </p>
         Por {me}
         <div className="flex">
           <div className="grow"></div>
