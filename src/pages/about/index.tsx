@@ -49,8 +49,11 @@ export default function About() {
         Por {me}
         <div className="flex">
           <div className="grow"></div>
-          <a className="underline" href="quiz/satyrzinho">
-            Voltar
+          <a
+            className="border-1 px-2 py-1 hover:bg-red-800 font-bold rounded"
+            href="quiz/satyrzinho"
+          >
+            &lt;
           </a>
         </div>
       </div>

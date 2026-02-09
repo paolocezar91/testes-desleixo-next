@@ -1,8 +1,8 @@
 {
   "quiz": {
     "id": "satyrzinho-quiz",
-    "title": "Por que me desafias, Babalon?",
-    "description": "Bom dia, guerreiros warriors, vocês que galgaram a noite eterna durante toda a noite. É, nós estamos com mais um quiz aqui. Descubra quem você é no vídeo da entrevista de Satyrzinho Satan Boy!",
+    "title": "Quem é você no vídeo do Satyrzinho Satan Boy?",
+    "description": "Por que me desafias, Babalon? Bom dia, guerreiros warriors, vocês que galgaram a noite eterna durante toda a noite. É, nós estamos com mais um quiz aqui. Descubra quem você é no vídeo da entrevista de Satyrzinho Satan Boy!",
     "coverVideo": "AXS9-Rjsq_w",
     "metadata": {
       "author": "Paolo; Uri",
@@ -25,7 +25,7 @@
     {
       "id": "entrevistador",
       "title": "Entrevistador",
-      "description": "Sua natureza inquisitiva faz você ver através das pegadinhas e das manotas de supostos metaleiros tr00zera. Sua falta de impressionabilidade consoante a relógios (supostamente) demoníacos te torna um excelente questionador.",
+      "description": "Sua natureza inquisitiva faz você ver através das pegadinhas e das manotas de \"metaleiros escandinavos de raiz\". Sua falta de impressionabilidade consoante a relógios (supostamente) demoníacos te torna um excelente questionador.",
       "imageUrl": "/entrevistador.png"
     },
     {

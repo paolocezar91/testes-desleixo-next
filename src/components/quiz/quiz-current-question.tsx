@@ -49,7 +49,7 @@ export default function QuizCurrentQuestion({
           <button
             key={answer.id}
             onClick={() => onClick(answer.id)}
-            className="w-full p-4 text-left border rounded bg-black hover:bg-gray-50 hover:text-black"
+            className="w-full p-4 cursor-pointer text-left border rounded bg-black hover:bg-gray-50 hover:text-black"
           >
             {answer.text}
             <small>

@@ -22,7 +22,7 @@ function recordAnswer(
   progress: QuizProgressModel,
   questions: QuestionModel[],
   questionId: string,
-  answerId: string
+  answerId: string,
 ): QuizProgressModel | null {
   const question = questions.find((q) => q.id === questionId);
   if (!question) return null;
@@ -42,7 +42,7 @@ function recordAnswer(
   // advance index
   progress.currentQuestionIndex = Math.min(
     progress.currentQuestionIndex + 1,
-    questions.length
+    questions.length,
   );
 
   // mark completion time if finished
@@ -59,13 +59,13 @@ function recordAnswer(
  */
 function getFinalResult(
   quiz: QuizModel,
-  progress: QuizProgressModel
+  progress: QuizProgressModel,
 ): ResultModel | null {
   if (progress.currentQuestionIndex < quiz.questions.length) return null;
 
   // Find the result ID with the highest score
   const [highestScoringResultId] = Object.entries(progress.scores).sort(
-    ([, scoreA], [, scoreB]) => scoreB - scoreA
+    ([, scoreA], [, scoreB]) => scoreB - scoreA,
   );
 
   if (!highestScoringResultId) return null;
@@ -113,7 +113,7 @@ export default function Quiz({ quizId }: { quizId: string }) {
   const [progress, setProgress] = useState<QuizProgressModel | null>(null);
   const [finalResult, setFinalResult] = useState<ResultModel | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState<QuestionModel | null>(
-    null
+    null,
   );
 
   const start = useCallback(() => {
@@ -135,7 +135,7 @@ export default function Quiz({ quizId }: { quizId: string }) {
         progress!,
         quiz!.questions,
         currentQuestion.id,
-        answerId
+        answerId,
       );
 
       if (currentProgress) {
@@ -146,7 +146,7 @@ export default function Quiz({ quizId }: { quizId: string }) {
         setCurrentQuestion(currentQuestion_);
       }
     },
-    [currentQuestion, progress, quiz]
+    [currentQuestion, progress, quiz],
   );
 
   useEffect(() => {
@@ -157,7 +157,7 @@ export default function Quiz({ quizId }: { quizId: string }) {
       setCurrentQuestion(
         emptyProgress.currentQuestionIndex >= 0
           ? quiz_.questions[emptyProgress.currentQuestionIndex]
-          : null
+          : null,
       );
     });
   }, [url]);
@@ -175,8 +175,8 @@ export default function Quiz({ quizId }: { quizId: string }) {
       <RootLayout subtitle={quiz.title}>
         <Header />
         <QuizResult finalResult={finalResult}>
-          <Button className="w-fit" onClick={restart}>
-            Refazer teste
+          <Button className="flex justify-items py-3 w-fit" onClick={restart}>
+            Refazer test<span className="relative rotate-y-180">E</span>
           </Button>
         </QuizResult>
       </RootLayout>
@@ -191,12 +191,14 @@ export default function Quiz({ quizId }: { quizId: string }) {
       {!currentQuestion && (
         <div className="flex flex-col items-center">
           <QuizDescription quiz={quiz} />
-          <Button onClick={start}>Iniciar teste</Button>
+          <Button className="flex justify-items py-3" onClick={start}>
+            Iniciar test<span className="relative rotate-y-180">E</span>
+          </Button>
         </div>
       )}
 
       {currentQuestion && (
-        <div className="pt-4">
+        <div className="pt-4 flex flex-col gap-4 items-center">
           <QuizCurrentQuestion
             showProgress={quiz.config?.showProgress}
             questionLength={quiz.questions.length}
@@ -204,6 +206,9 @@ export default function Quiz({ quizId }: { quizId: string }) {
             currentQuestion={currentQuestion}
             onClick={handleAnswer}
           />
+          <Button className="flex justify-items py-3 w-fit" onClick={start}>
+            Reiniciar test<span className="relative rotate-y-180">E</span>
+          </Button>
         </div>
       )}
     </RootLayout>

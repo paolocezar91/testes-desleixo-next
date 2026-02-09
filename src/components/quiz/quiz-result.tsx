@@ -9,9 +9,9 @@ export default function QuizResult({
   children: React.ReactNode;
 }) {
   return (
-    <div className="space-y-4 text-center">
-      <h1 className="text-3xl font-bold">Resultado:</h1>
-      <h2>
+    <div className="space-y-4 flex flex-col items-center">
+      <h1 className="text-3xl text-center font-bold">Resultado:</h1>
+      <h2 className="text-center">
         Você é <strong>{finalResult.title}</strong>!
       </h2>
 
